@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/item_integralRemark_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorGray"
+        android:text="xxxx"/>
+
+    <TextView
+        android:id="@+id/item_time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/colorGray3"
+        android:textSize="12sp"
+        android:layout_alignBottom="@id/item_integralRemark_tv"
+        android:text="xxx"/>
+    <TextView
+        android:id="@+id/item_surplusIntegral_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_integralRemark_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:paddingBottom="15dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_hint"
+        android:text="xxxx"/>
+    <TextView
+        android:id="@+id/item_offIntegral_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/item_surplusIntegral_tv"
+        android:layout_marginRight="15dp"
+        android:paddingBottom="15dp"
+        android:text="xxxxx"
+        android:textColor="@color/colorGray"/>
+</RelativeLayout>

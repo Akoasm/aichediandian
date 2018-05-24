@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/ktv_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--广告栏-->
+            <include
+                android:id="@+id/ktv_banner"
+                layout="@layout/basic_carousel_image" />
+            <!--名称-->
+            <include
+                android:id="@+id/ktv_name"
+                layout="@layout/basic_merchants_name" />
+            <!--联系方式-->
+            <include
+                android:id="@+id/ktv_information"
+                layout="@layout/basic_contact_information" />
+
+            <!--买单-->
+            <include
+                android:id="@+id/ktv_checkSelf"
+                layout="@layout/basic_self_help_pay" />
+            <!--代金券-->
+            <include
+                android:id="@+id/ktv_cashcoupon"
+                layout="@layout/basic_cash_voucher" />
+            <!--预定-->
+            <LinearLayout
+                android:id="@+id/activity_ktv_reserve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/entertainment_reserve_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="预订"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#e3e3e3">
+
+                </LinearLayout>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/ktv_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    app:tabIndicatorColor="@color/colorOrange"
+                    app:tabMaxWidth="100dp"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/colorOrange">
+
+                </android.support.design.widget.TabLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/background">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ktv_type_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center_vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/ktv_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white">
+
+                    </android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+                <!--分割线-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/background"></LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ktv_reserve_rechcler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp">
+
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <!--团购-->
+            <include
+                android:id="@+id/ktv_group"
+                layout="@layout/basic_group_purchase" />
+
+            <!--用户评价-->
+            <include
+                android:id="@+id/ktv_comment"
+                layout="@layout/basic_user_evaluation" />
+            <!--更多服务-->
+            <include
+                android:id="@+id/ktv_service"
+                layout="@layout/basic_more_services" />
+            <!--附近商家-->
+            <include
+                android:id="@+id/ktv_nearby"
+                layout="@layout/basic_nearby_merchants" />
+            <!--底部提示-->
+            <include layout="@layout/basic_end_pormpt" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <include android:id="@+id/ktv_title" layout="@layout/title_bar" />
+
+</RelativeLayout>

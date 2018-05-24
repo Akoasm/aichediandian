@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/item_ktv_left"
+        android:layout_width="5dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_ktv_linear"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/item_ktv_left"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/item_ktv_image"
+            android:layout_width="130dp"
+            android:layout_height="110dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/background" />
+
+        <TextView
+            android:id="@+id/item_ktv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/font_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/item_ktv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/font_color"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/colorOrange"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/item_ktv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="127"
+                android:textColor="@color/colorOrange"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/item_ktv_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorOrange"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/item_ktv_right"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_ktv_linear"
+        android:orientation="horizontal"
+        android:visibility="gone"></LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:src="@mipmap/background"
+            android:id="@+id/popularity_two_image"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/popularity_two_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/popularity_two_image"
+            android:src="@mipmap/entertainment_popularity_two" />
+
+        <TextView
+            android:background="@drawable/text_prospect_black"
+            android:id="@+id/popularity_two_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/popularity_two_image"
+            android:paddingBottom="7dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="13sp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+
+        <ImageView
+            android:src="@mipmap/background"
+            android:id="@+id/popularity_three_image"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/popularity_three_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/popularity_three_image"
+            android:src="@mipmap/entertainment_popularity_three" />
+
+        <TextView
+            android:background="@drawable/text_prospect_black"
+            android:id="@+id/popularity_three_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/popularity_three_image"
+            android:paddingBottom="7dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp">
+
+        <ImageView
+            android:src="@mipmap/background"
+            android:id="@+id/popularity_four_image"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:scaleType="centerCrop" />
+
+        <ImageView
+            android:id="@+id/popularity_four_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/popularity_four_image"
+            android:src="@mipmap/entertainment_popularity_four" />
+
+        <TextView
+            android:background="@drawable/text_prospect_black"
+            android:id="@+id/popularity_four_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/popularity_four_image"
+            android:paddingBottom="7dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:textSize="13sp"
+            android:ellipsize="end"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+</LinearLayout>

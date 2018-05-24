@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.sinata.rwxchina.basiclib.view.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--广告栏-->
+            <include layout="@layout/basic_carousel_image" />
+            <!--名称-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:id="@+id/ktv_group_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="------"
+                    android:textColor="@color/font_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/group_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ktv_group_name"
+                    android:layout_marginLeft="10dp"
+                    android:text="------"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/group_market_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/group_price"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/group_price"
+                    android:text="原价：------" />
+            </RelativeLayout>
+            <!--条件-->
+            <include layout="@layout/basic_purchase_condition"/>
+            <!--套餐-->
+            <LinearLayout
+                android:id="@+id/ktv_group_combo_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="15dp"
+                    android:paddingTop="10dp"
+                    android:text="酒水小吃套餐"
+                    android:textColor="@color/font_color"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/icon_dot_gray" />
+
+                    <TextView
+                        android:id="@+id/ktv_group_combo_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/font_color"
+                        android:textSize="14sp"
+                        android:text="------" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background"></LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/ktv_group_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+            <!--购买须知-->
+            <include layout="@layout/basic_group_purchase_needs" />
+            <!--附近商家-->
+            <include layout="@layout/basic_nearby_merchants" />
+        </LinearLayout>
+    </com.sinata.rwxchina.basiclib.view.MyScrollView>
+    <!--立即下单-->
+    <include layout="@layout/basic_bottom_order" />
+    <!--标题栏-->
+    <include layout="@layout/title_bar"></include>
+</RelativeLayout>

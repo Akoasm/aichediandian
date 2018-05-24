@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/commodityList_title"
+        layout="@layout/basic_normal_title"></include>
+
+    <include
+        android:id="@+id/commodity_filter"
+        layout="@layout/basic_list_screening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commodityList_title" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/activity_list_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/commodity_filter">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/brand_area_list_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+        </android.support.v7.widget.RecyclerView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <View
+        android:id="@+id/nearbyService_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/commodity_filter"
+        android:background="#90000000"
+        android:visibility="gone"></View>
+</RelativeLayout>

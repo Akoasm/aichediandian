@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="86dp"
+    android:background="@color/white">
+<TextView
+    android:layout_marginTop="15dp"
+    android:id="@+id/receiver_tv"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/sp_14"
+    android:textColor="@color/text_hint"
+    android:drawableLeft="@mipmap/icon_receiver"
+    android:text="收货人："
+    android:drawablePadding="10dp"
+    android:layout_marginLeft="15dp"/>
+    <TextView
+        android:layout_marginTop="15dp"
+        android:id="@+id/receiverInfo_receiver_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/receiver_tv"
+        android:text="王小二 "/>
+    <TextView
+        android:id="@+id/receiverInfo_receiverPhone_tv"
+        android:layout_marginTop="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@mipmap/icon_phonenumber"
+        android:textSize="14sp"
+        android:textColor="@color/text_hint"
+        android:drawablePadding="@dimen/dp_10"
+        android:layout_marginRight="15dp"/>
+    <TextView
+        android:id="@+id/receiverInfo_receiverAddress_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/receiver_tv"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@mipmap/icon_address"
+        android:layout_marginLeft="15dp"
+        android:drawablePadding="@dimen/dp_10"
+        android:textSize="14sp"
+        android:textColor="@color/text_hint"/>
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--标题栏-->
+    <include android:id="@+id/mallpayment_titleBar"  layout="@layout/basic_normal_title" />
+    <!--底部下单按钮-->
+    <LinearLayout
+        android:id="@+id/mallpayment_bottom_ll"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/basic_bottom_order" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_above="@id/mallpayment_bottom_ll"
+        android:layout_below="@id/mallpayment_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--添加收货地址-->
+            <include android:id="@+id/mallpayment_address" layout="@layout/basic_payment_address" />
+            <!--商铺信息-->
+            <include android:id="@+id/mallpayment_shop" layout="@layout/basic_payment_mall_shopinfor"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:padding="15dp"
+                android:background="@color/colorWhite"
+                android:text="折扣优惠"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--代金券-->
+            <include android:id="@+id/mallpayment_voucher" layout="@layout/basic_payment_voucher" />
+            <!--积分-->
+            <include android:id="@+id/mallpayment_integral" layout="@layout/basic_payment_integral" />
+            <!--余额-->
+            <include android:id="@+id/mallpayment_balance" layout="@layout/basic_payment_balance" />
+            <!--总额-->
+            <include android:id="@+id/mallpayment_money" layout="@layout/basic_payment_mall_total"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

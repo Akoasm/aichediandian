@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/head_rl"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        >
+
+        <TextView
+            android:id="@+id/allOrder_orderNumber_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="xxxx"
+            android:textColor="@color/text_hint"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/allOrder_orderStatus_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/text_hint"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/bg_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="42dp"
+            android:background="@color/background" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/refundOrder_rl">
+        <ImageView
+            android:id="@+id/allOrder_commodityImage_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:src="@mipmap/background"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/allOrder_commodityName_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/allOrder_commodityImage_iv"
+            android:text="ssssss"
+            android:textColor="@color/colorGray"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/allOrder_commodityStatus_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/allOrder_commodityName_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:text="待消费"
+            android:textColor="@color/text_hint"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/allOrder_orderCount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/allOrder_commodityName_tv"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/allOrder_commodityImage_iv"
+            android:text="x1"
+            android:textColor="#999999"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/order_realPayMoney_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/allOrder_orderCount_tv"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorOrange"
+            android:textSize="18sp"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:id="@+id/order_payMoney_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/allOrder_orderCount_tv"
+            android:layout_toLeftOf="@id/order_realPayMoney_tv"
+            android:text="实付：￥"
+            android:textColor="@color/colorOrange"
+            android:textSize="15sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_refundFoot_rl"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+        <TextView
+            android:id="@+id/bg_line1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/background" />
+        <TextView
+            android:id="@+id/order_pay_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@mipmap/allorder_delete"
+            android:drawablePadding="10dp"
+            android:text="删除" />
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/background"
+        android:layout_below="@id/order_refunds_btn" />
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:visibility="visible">
+    <RelativeLayout
+        android:id="@+id/health_technician_total_re"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:text="技师"
+            android:textColor="#333333"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/health_jishi_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:src="@mipmap/icon_details_select" />
+
+        <TextView
+            android:id="@+id/health_alljishi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/health_jishi_img"
+            android:text="全部技师"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/health_technician_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        android:paddingBottom="10dp">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/item_shopCommodity_rl">
+
+    <ImageView
+        android:id="@+id/item_brand_self_shop_commodity_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/background"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"/>
+    <TextView
+        android:id="@+id/item_brand_type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_brand_self_shop_commodity_image"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/font_color"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/item_brand_self_shop_commodity_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="固特异"
+        android:textColor="@color/font_color"
+        android:textSize="12sp"
+        android:layout_below="@id/item_brand_type_tv"
+        android:layout_marginLeft="15dp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@id/item_brand_self_shop_commodity_name">
+
+        <TextView
+            android:id="@+id/item_brand_self_shop_commodity_price_pre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="500"
+            android:textColor="@color/colorOrange"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/item_brand_self_shop_commodity_price_ori"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="555"
+            android:textColor="@color/colorGray3"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+</RelativeLayout>

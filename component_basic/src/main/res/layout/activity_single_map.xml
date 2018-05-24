@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/basic_normal_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/single_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></com.amap.api.maps.MapView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/single_map_image"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_width="56dp"
+                android:layout_height="34dp" />
+            <LinearLayout
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/single_map_gothere"
+                android:orientation="horizontal"
+                android:layout_width="90dp"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:background="@drawable/bg_brandimage">
+
+                <ImageView
+
+                    android:src="@mipmap/entertainment_gothere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textColor="@color/colorOrange"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="8dp"
+                    android:text="到这里去"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/single_map_image"
+                android:layout_centerVertical="true"
+                android:orientation="vertical"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="古月中药理疗"
+                    android:textColor="@color/font_color"
+                    android:textSize="15sp"
+                    android:id="@+id/single_map_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginTop="6dp"
+                    android:text="龙潭立交内侧辅道往南想囧大括号就好玩"
+                    android:textColor="@color/font_color"
+                    android:textSize="14sp"
+                    android:id="@+id/single_map_address"
+                    android:singleLine="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

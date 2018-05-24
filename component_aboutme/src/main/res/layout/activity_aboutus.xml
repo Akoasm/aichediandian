@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <!--关于爱车点点信息-->
+
+        <include layout="@layout/home_title_layout"
+            android:id="@+id/aboutUs_title"></include>
+
+            <ImageView
+                android:id="@+id/aboutUs_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/aboutUs_title"
+                android:layout_marginTop="80dp"
+                android:src="@mipmap/logo"/>
+    <TextView
+        android:id="@+id/aboutUs_version_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_hint"
+        android:layout_below="@id/aboutUs_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/aboutUs_version_tv"
+        android:layout_alignBottom="@id/aboutUs_version_tv"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_hint"
+        android:text="版本号"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:id="@+id/aboutus_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/aboutUs_version_tv"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/text_hint"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+</RelativeLayout>

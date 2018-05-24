@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/withdraw_title"
+        layout="@layout/home_title_layout"></include>
+
+    <RelativeLayout
+        android:id="@+id/head_rl"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_below="@id/withdraw_title"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="40dp"
+        android:background="#ededed">
+
+        <TextView
+            android:id="@+id/withdraw_bankAccount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:text="到账银行卡"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/withdraw_bank_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="34dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/withdraw_bankAccount_tv"
+            android:text=""
+            android:textColor="#ff720a"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/arrivalTime_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/withdraw_bankAccount_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="x小时内到账"
+            android:textColor="#666666"
+            android:textSize="11sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/body_rl"
+        android:layout_width="match_parent"
+        android:layout_height="244dp"
+        android:layout_below="@id/head_rl"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/withdrawsCash_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="20dp"
+            android:text="提现金额"
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/icon_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/withdrawsCash_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="14dp"
+            android:text="￥"
+            android:textSize="26sp" />
+
+        <EditText
+            android:id="@+id/withdrawMoney_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/icon_money_tv"
+            android:layout_toRightOf="@id/icon_money_tv"
+            android:background="@null"
+            android:gravity="center"
+            android:hint="请输入提现金额"
+            android:inputType="numberDecimal"
+            android:paddingRight="30dp"
+            android:textSize="26sp" />
+
+        <TextView
+            android:layout_width="306dp"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/icon_money_tv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:background="#cccccc" />
+
+        <TextView
+            android:id="@+id/withdrawBalance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_money_tv"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="42dp"
+            android:text="余额￥"
+            android:textColor="#666666"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/withdraw_balance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/icon_money_tv"
+            android:layout_marginTop="42dp"
+            android:layout_toRightOf="@id/withdrawBalance_tv"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/withdraw_sure_btn"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@id/withdraw_balance_tv"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="22dp"
+            android:layout_marginTop="36dp"
+            android:background="@mipmap/balance_button_background"
+            android:text="确认"
+            android:textSize="18sp"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/withdrawDetail_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/body_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="172dp"
+        android:drawablePadding="10dp"
+        android:drawableRight="@mipmap/right_arrow"
+        android:text="查看提现记录"
+        android:textColor="#ff7001"
+        android:textSize="12sp" />
+</RelativeLayout>

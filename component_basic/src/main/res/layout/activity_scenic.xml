@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.sinata.rwxchina.basiclib.view.MyScrollView
+        android:id="@+id/secnic_myscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--广告栏-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="visible">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/scenic_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <LinearLayout
+                    android:id="@+id/scenic_dots_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+            <!--名称-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/scenic_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="-----"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/scenic_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="暂无星级"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/background" />
+            <!--地址-->
+            <LinearLayout
+                android:id="@+id/scenic_address_linear"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:src="@mipmap/icon_basic_location" />
+
+                <TextView
+                    android:id="@+id/scenic_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="15dp" />
+            </LinearLayout>
+            <!--分割线-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/background" />
+            <!--详情图片-->
+            <ImageView
+                android:id="@+id/scenic_details_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                />
+        </LinearLayout>
+    </com.sinata.rwxchina.basiclib.view.MyScrollView>
+
+    <include android:id="@+id/scenic_title" layout="@layout/title_bar"></include>
+</RelativeLayout>

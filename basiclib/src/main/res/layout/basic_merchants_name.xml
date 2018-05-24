@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/merchants_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="-------"
+            android:textColor="@color/font_color"
+            android:textSize="20sp" />
+
+        <RatingBar
+            android:id="@+id/merchants_rating"
+            style="@style/myRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_below="@id/merchants_name"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="15dp"
+            android:numStars="5"
+            android:rating="5" />
+
+        <TextView
+            android:id="@+id/merchants_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/merchants_rating"
+            android:layout_toEndOf="@+id/merchants_rating"
+            android:layout_toRightOf="@+id/merchants_rating"
+            android:text="(--)"
+            android:textColor="@color/colorOrange" />
+        <LinearLayout
+            android:id="@+id/basic_merchants_averagePrice_ll"
+            android:visibility="gone"
+            android:layout_toRightOf="@id/merchants_score"
+            android:layout_alignBottom="@id/merchants_score"
+            android:gravity="right"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="13sp"
+                android:text="人均："
+                android:textColor="@color/colorOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/basic_merchants_averagePrice"
+                android:textSize="16sp"
+                android:textColor="@color/colorOrange"
+                android:text="88元"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>

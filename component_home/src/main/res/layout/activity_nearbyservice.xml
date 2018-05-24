@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/nearbyService_title"
+        layout="@layout/home_title_layout"></include>
+
+    <include
+        android:id="@+id/filter_ll"
+        layout="@layout/nearbyservice_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nearbyService_title"></include>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/nearbyService_srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filter_ll">
+
+        <ListView
+            android:id="@+id/nearbyService_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:divider="@color/background"
+            android:dividerHeight="10dp">
+
+        </ListView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <View
+        android:id="@+id/nearbyService_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filter_ll"
+        android:background="#90000000"
+        android:visibility="gone"></View>
+</RelativeLayout>

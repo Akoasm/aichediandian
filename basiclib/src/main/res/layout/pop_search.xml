@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_ed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="345dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/radius_border">
+
+
+            <ImageView
+                android:id="@+id/pop_search_image"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/pop_search" />
+
+            <EditText
+                android:id="@+id/pop_search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/pop_search_image"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:background="@null"
+                android:hint="搜索相关信息"
+                android:lines="1"
+                android:textColor="@color/colorGray3"
+                android:textSize="14sp" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

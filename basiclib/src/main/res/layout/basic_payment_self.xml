@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/activity_confim_order_typeone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/radius_border"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="消费总额（元）"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/self_payment_price_ori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:inputType="number|numberDecimal"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="请询问服务员后输入"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:phoneNumber="true"
+                android:textColor="@color/colorOrange"
+                android:textSize="22sp" />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="不参与优惠金额（元）"
+                android:textColor="@color/font_color"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/self_payment_price_nodiscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:inputType="number|numberDecimal"
+                android:gravity="right"
+                android:hint="请询问服务员后输入"
+                android:maxLength="5"
+                android:maxLines="1"
+                android:phoneNumber="true"
+                android:textColorHint="@color/colorGray3"
+                android:textColor="@color/colorOrange"
+
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

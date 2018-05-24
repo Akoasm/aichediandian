@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sinata.rwxchina.component_login.activity.FindPasswordActivity">
+    <LinearLayout
+        android:background="@drawable/login_findpwd"
+        android:layout_width="match_parent"
+        android:layout_height="64dp">
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+            <ImageView
+                android:id="@+id/findpwd_finish"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/icon_back_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="找回密码"
+                android:textSize="18sp"
+                android:textColor="@color/colorWhite"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="224dp">
+            <LinearLayout
+                android:layout_marginTop="28dp"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:text="+86"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:background="@color/colorGray2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/findpwd_phone"
+                        android:layout_marginRight="10dp"
+                        android:hint="@string/input_phone"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:inputType="phone"
+                        android:background="@null"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:id="@+id/findpwd_codedisplay"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:text="发送验证码"
+                        android:textSize="12sp"
+                        android:textColor="@color/colorOrange"
+                        android:padding="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:background="@color/colorGray2"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/findpwd_code"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@null"
+                    android:hint="收到的验证码"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:background="@color/colorGray2"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:src="@mipmap/suo"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:layout_width="24dp"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:background="@color/colorGray2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/findpwd_pwd"
+                        android:hint="输入新密码"
+                        android:inputType="textPassword"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:background="@null"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                    <CheckBox
+                        android:id="@+id/findpwd_seePwd"
+                        android:button="@drawable/background_password"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@color/colorGray2"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp">
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+        <Button
+            android:id="@+id/findpwd_ok"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/background_gradient_vertical"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:text="确认"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</LinearLayout>

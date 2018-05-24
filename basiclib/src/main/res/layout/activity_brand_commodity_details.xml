@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <!--标题栏-->
+    <include layout="@layout/tab_titlelayout"
+        android:id="@+id/commodidty_tab_title"></include>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/commodity_bottom_ll">
+        <!--<Button-->
+            <!--android:id="@+id/contactCustomerService_btn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@color/white"-->
+            <!--android:textSize="13sp"-->
+            <!--android:textColor="@color/text_hint"-->
+            <!--android:text="联系客服"-->
+            <!--android:drawableTop="@mipmap/brand_commodity_customservice" />-->
+        <Button
+            android:id="@+id/commodity_buy_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@mipmap/buyagain_btn_bg"
+            android:text="立即购买"
+            android:textColor="#f2f2f2"
+            android:textSize="18sp"/>
+    </LinearLayout>
+    <com.sinata.rwxchina.basiclib.view.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/commodidty_tab_title"
+        android:id="@+id/commodityDetail_sv"
+        android:scrollbars="none"
+        android:layout_above="@id/commodity_bottom_ll">
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+     <!--轮播图-->
+     <FrameLayout
+         android:id="@+id/carousel_frame"
+         android:layout_width="match_parent"
+         android:layout_height="300dp">
+
+         <android.support.v4.view.ViewPager
+             android:id="@+id/carousel_viewpager"
+             android:layout_width="match_parent"
+             android:layout_height="300dp" />
+
+         <LinearLayout
+             android:id="@+id/carousel_dots"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom|center"
+             android:layout_marginBottom="10dp"
+             android:layout_marginRight="10dp"
+             android:orientation="horizontal"></LinearLayout>
+     </FrameLayout>
+     <!--名字-->
+     <include layout="@layout/basic_brand_details_name"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/commodityDetail_commodityInfo_ll"
+         android:layout_below="@id/carousel_frame"/>
+     <!--标签-->
+     <android.support.v7.widget.RecyclerView
+         android:id="@+id/brand_commodity_details_condition"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="1dp"
+         android:background="@color/white"
+         android:layout_below="@id/commodityDetail_commodityInfo_ll"></android.support.v7.widget.RecyclerView>
+     <!--购物流程-->
+     <include layout="@layout/basic_brand_shopping_process"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:id="@+id/commodityDetail_buyProcess"
+         android:layout_below="@id/brand_commodity_details_condition"/>
+     <!--用户评价-->
+     <include layout="@layout/basic_user_evaluation"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:id="@+id/commodityDetail_userComment"
+         android:layout_below="@id/commodityDetail_buyProcess"/>
+     <!--商铺信息-->
+     <include layout="@layout/basic_shop_information"
+         android:id="@+id/shopInfo_ll"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@id/commodityDetail_userComment"/>
+     <!--商品详情-->
+     <LinearLayout
+         android:id="@+id/commodityDetial_ll"
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/shopInfo_ll">
+         <TextView
+             android:text="产品详情"
+             android:padding="15dp"
+             android:textSize="16sp"
+             android:textColor="@color/text_hint"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+     </LinearLayout>
+     <android.support.v7.widget.RecyclerView
+         android:background="@color/white"
+         android:id="@+id/brand_commodity_details_particulars"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_below="@id/commodityDetial_ll" ></android.support.v7.widget.RecyclerView>
+ </RelativeLayout>
+
+
+    </com.sinata.rwxchina.basiclib.view.MyScrollView>
+
+</RelativeLayout>

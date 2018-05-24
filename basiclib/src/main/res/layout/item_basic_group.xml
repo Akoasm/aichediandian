@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/food_item_goods_ll"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="15dp"
+        android:id="@+id/group_item_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--图片-->
+        <ImageView
+            android:id="@+id/food_item_goods_img"
+            android:layout_width="81dp"
+            android:layout_height="61dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/background" />
+        <!--名称-->
+        <RelativeLayout
+            android:id="@+id/group_item_introduction_re"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/food_item_goods_img">
+
+            <TextView
+                android:id="@+id/food_item_goods_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:lineSpacingExtra="10dp"
+                android:text="1231111111"
+                android:textSize="15dp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_item_goods_name"
+                android:layout_marginTop="13dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/group_item_goods_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="123"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/group_item_goods_market_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/group_item_goods_price"
+                    android:text="123"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--已售份数-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp">
+
+            <TextView
+                android:id="@+id/group_item_sold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已售20份" />
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/icon_details_select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

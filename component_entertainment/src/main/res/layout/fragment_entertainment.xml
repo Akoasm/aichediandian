@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/entertainment_smartRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.sinata.rwxchina.basiclib.view.MyScrollView
+            android:id="@+id/entertainment_scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--轮播图-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/entertainment_banner_viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="179dp" />
+
+                    <LinearLayout
+                        android:id="@+id/entertainment_dotGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                </FrameLayout>
+                <!--icon-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/entertainment_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"></android.support.v7.widget.RecyclerView>
+                <!--今日推荐-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:src="@mipmap/entertainment_recommend" />
+
+                    <TextView
+                        android:layout_width="1dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="15dp"
+                        android:background="#999999" />
+
+                    <TextSwitcher
+                        android:id="@+id/entertaiment_recommend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:maxLength="10"
+                        android:singleLine="true">
+
+                    </TextSwitcher>
+                </LinearLayout>
+                <!--人气排行-->
+                <LinearLayout
+                    android:id="@+id/entertainment_popularity_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entertainment_popularity_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="人气排行"
+                        android:textColor="@color/font_color" />
+
+                    <include layout="@layout/entertainment_popularity_one" />
+
+                    <include layout="@layout/entertainment_popularity_two" />
+                </LinearLayout>
+                <!--美食-->
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/entertainment_food_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"></android.support.v7.widget.RecyclerView>
+
+
+                <!--酒店-->
+                <LinearLayout
+                    android:id="@+id/entertainment_hotel_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entertainment_hotel_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="高端品质 奢享体验"
+                        android:textColor="@color/font_color" />
+
+                    <LinearLayout
+                        android:id="@+id/entertainment_hotel_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/hotel_head_image_left"
+                                android:layout_width="169dp"
+                                android:layout_height="110dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/background" />
+
+                            <TextView
+                                android:id="@+id/hotel_head_name_left"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/hotel_head_image_left"
+                                android:background="@drawable/text_prospect_black"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="5dp"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/hotel_head_image_right"
+                                android:layout_width="169dp"
+                                android:layout_height="110dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/background" />
+
+                            <TextView
+                                android:id="@+id/hotel_head_name_right"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@id/hotel_head_image_right"
+                                android:background="@drawable/text_prospect_black"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="5dp"
+                                android:textColor="@color/white"
+                                android:textSize="15sp" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/entertainment_hotel_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+                <!--KTV-->
+                <LinearLayout
+                    android:id="@+id/entertainment_ktv_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entertainment_ktv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="K歌唱不停"
+                        android:textColor="@color/font_color" />
+
+                    <LinearLayout
+                        android:layout_marginBottom="15dp"
+                        android:id="@+id/entertainment_ktv_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal">
+                        <!--KTV左侧-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ktv_image_background"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/entertainment_ktv_image_left"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/background" />
+
+                            <TextView
+                                android:id="@+id/entertainment_ktv_name_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="火爆开唱"
+                                android:textColor="@color/font_color"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+                        <!--KTV右侧-->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="140dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/ktv_image_background"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/entertainment_ktv_image_right"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/background" />
+
+                            <TextView
+                                android:id="@+id/entertainment_ktv_name_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="火爆开唱"
+                                android:textColor="@color/font_color"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.sinata.rwxchina.basiclib.view.HorizontalListView
+                        android:id="@+id/entertainment_ktv_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="215dp"></com.sinata.rwxchina.basiclib.view.HorizontalListView>
+                </LinearLayout>
+                <!--足疗养生-->
+                <LinearLayout
+                    android:id="@+id/entertainment_health_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entertainment_health_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="足疗养生"
+                        android:textColor="@color/font_color" />
+
+                    <LinearLayout
+                        android:id="@+id/entertianment_health_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/entertainment_health_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:scaleType="centerCrop"
+                            android:src="@mipmap/background" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/entertainment_health_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="美容"
+                                android:textColor="@color/font_color" />
+
+                            <TextView
+                                android:id="@+id/entertainment_health_address"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="二环路北四段"
+                                android:textColor="@color/font_color" />
+
+                            <TextView
+                                android:id="@+id/entertaiment_health_miles"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="0.7公里"
+                                android:textColor="@color/font_color" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <RatingBar
+                                android:id="@+id/entertainment_health_rating"
+                                style="@style/myRatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:numStars="5"
+                                android:rating="5" />
+
+                            <TextView
+                                android:id="@+id/entertainment_health_score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/entertainment_health_rating"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@+id/entertainment_health_rating"
+                                android:text="(--)"
+                                android:textColor="@color/colorOrange" />
+
+                            <TextView
+                                android:id="@+id/entertainment_health_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:text="人均124元"
+                                android:textColor="@color/colorOrange" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/line_background" />
+
+                    <com.sinata.rwxchina.basiclib.view.HorizontalListView
+                        android:id="@+id/entertainment_health_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="215dp"
+                        android:layout_marginTop="10dp"></com.sinata.rwxchina.basiclib.view.HorizontalListView>
+
+                </LinearLayout>
+                <!--景区旅游-->
+                <LinearLayout
+                    android:id="@+id/entertaiment_scenic_linear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/entertainment_scenic_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="周边游"
+                        android:textColor="@color/font_color" />
+
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/entertainment_scenic_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"></android.support.v4.view.ViewPager>
+
+                    <LinearLayout
+                        android:id="@+id/entertainment_scenic_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:layout_marginBottom="11dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/entertainment_scenic_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"></android.support.v7.widget.RecyclerView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </com.sinata.rwxchina.basiclib.view.MyScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <View
+        android:id="@+id/entertainment_fakeview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+    <!--标题栏-->
+    <RelativeLayout
+        android:id="@+id/yule_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/entertainment_fakeview"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="娱乐消费"
+            android:textColor="@color/colorGray"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/refunding_title"
+        layout="@layout/home_title_layout"></include>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/refunding_title"
+        android:background="#999999" />
+
+    <ImageView
+        android:id="@+id/refunding_iv"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:layout_below="@id/refunding_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp"
+        android:background="@mipmap/refunding" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/refunding_iv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="换货/退款中..."
+        android:textColor="@color/text_hint"
+        android:textSize="18sp" />
+</RelativeLayout>

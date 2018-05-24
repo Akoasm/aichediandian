@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+
+    <RelativeLayout
+        android:id="@+id/balance_rl"
+        android:layout_width="match_parent"
+        android:layout_height="352dp"
+        android:background="@mipmap/balance_background"
+        >
+        <RelativeLayout
+            android:id="@+id/balance1_rl"
+            android:layout_width="match_parent"
+            android:layout_height="257dp"
+            >
+            <!--钱包数量-->
+            <TextView
+                android:id="@+id/activity_balance_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="100dp"
+                android:text="0.00"
+                android:textColor="#ffffff"
+                android:textSize="50sp" />
+
+            <TextView
+                android:id="@+id/agent_income_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_balance_amount"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:text="总余额(元)"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </RelativeLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_below="@id/balance1_rl"
+    android:layout_marginTop="20dp"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:id="@+id/todayIncome_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="0.00"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"
+            android:textColor="#333333"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/todayIncome_tv"
+            android:text="今日收益(元)"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"
+            android:textColor="@color/text_hint"
+            />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="0.5dp"
+        android:layout_height="60dp"
+        android:background="@color/line_background"/>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/monthsIncome_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="0.00"
+            android:textSize="15sp"
+            android:textColor="#333333"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/monthsIncome_tv"
+            android:text="月总收益(元)"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:textSize="15sp"
+            android:textColor="@color/text_hint"/>
+    </RelativeLayout>
+</LinearLayout>
+
+
+
+    </RelativeLayout>
+    <include layout="@layout/title_layout"
+        android:id="@+id/balance_titleView"
+        ></include>
+    <Button
+        android:id="@+id/withdrawsCash_btn"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="38dp"
+        android:layout_marginRight="38dp"
+        android:layout_height="44dp"
+        android:layout_below="@id/balance_rl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        android:text="提现"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:background="@mipmap/balance_button_background"/>
+    <TextView
+        android:id="@+id/balanceDetail_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/withdrawsCash_btn"
+        android:text="查看收支明细"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp"
+        android:textColor="#ff7001"
+        android:drawableRight="@mipmap/icon_more_orange"
+        android:drawablePadding="8dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.sinata.rwxchina.basiclib.view.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--广告栏-->
+            <include layout="@layout/basic_carousel_image" />
+            <!--名称-->
+            <include layout="@layout/basic_merchants_name" />
+            <!--条件-->
+            <include layout="@layout/basic_purchase_condition"/>
+            <!--服务内容-->
+            <include layout="@layout/basic_package"/>
+
+            <!--购买须知-->
+            <include layout="@layout/basic_group_purchase_needs"/>
+
+        </LinearLayout>
+    </com.sinata.rwxchina.basiclib.view.MyScrollView>
+    <include layout="@layout/title_bar"/>
+    <include layout="@layout/basic_bottom_order" />
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.sinata.rwxchina.basiclib.view.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--顶部banner-->
+            <include layout="@layout/basic_carousel_image" />
+            <!--名字-->
+            <include layout="@layout/basic_merchants_name" />
+            <!--条件-->
+            <include layout="@layout/basic_purchase_condition" />
+            <!--房间配备-->
+            <LinearLayout
+                android:paddingLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:text="房间配备"
+                    android:textSize="16sp"
+                    android:textColor="@color/font_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/hotel_group_subtitle"
+                    android:textSize="13sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="单人床"
+                    android:textColor="@color/colorGray3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:background="@color/background"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+                <TextView
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="免费WIFI"
+                    android:id="@+id/hotel_group_description"
+                    android:textSize="14sp"
+                    android:textColor="@color/font_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!--购买须知-->
+            <include layout="@layout/basic_group_purchase_needs" />
+        </LinearLayout>
+    </com.sinata.rwxchina.basiclib.view.MyScrollView>
+
+    <include layout="@layout/basic_bottom_order" />
+    <include layout="@layout/title_bar"/>
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/brand_commodity_details_type"
+                android:layout_width="65dp"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/background_orange_radius"
+                android:gravity="center"
+                android:text="轮胎险"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:visibility="gone" />
+            <!--名称-->
+            <LinearLayout
+                android:id="@+id/brand_commodity_details_defination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/brand_commodity_details_type"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/brand_commodity_details_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="固特异"
+                    android:textColor="@color/font_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/brand_commodity_details_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="轮胎/汽车轮胎"
+                    android:textColor="@color/text_hint"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/colorOrange"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/brand_commodity_details_price_pre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="699"
+                android:textColor="@color/colorOrange"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/brand_commodity_details_price_ori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:text="￥799"
+                android:textColor="@color/colorGray3"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/brand_commodity_details_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1.2万"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="人订购"
+                    android:textColor="@color/colorGray3"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:scrollbars="none"
+        android:id="@+id/voucher_buy_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--轮播图-->
+            <include android:id="@+id/voucher_buy_banner" layout="@layout/basic_carousel_image" />
+            <!--价格信息-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/voucher_buy_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="古月中医理疗"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/voucher_buy_explain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="古月中医理疗"
+                        android:textColor="@color/text_hint"
+                        android:textSize="12sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/voucher_buy_present_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="￥85"
+                            android:textColor="@color/colorOrange"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/voucher_buy_original_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="23dp"
+                            android:layout_marginTop="10dp"
+                            android:text="最高门市价：￥100"
+                            android:textColor="@color/colorGray3"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/voucher_buy_panicBuy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/background_gradient_horizontal_right"
+                    android:text="立即抢购"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="商家信息"
+                    android:textColor="@color/colorGray3"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+            <!--商铺信息-->
+            <include android:id="@+id/voucher_shop" layout="@layout/basic_merchants_name" />
+            <!--地址信息-->
+            <include android:id="@+id/voucher_address" layout="@layout/basic_contact_information" />
+            <!--服务内容-->
+            <include android:id="@+id/voucher_service" layout="@layout/basic_package"/>
+            <!--购买须知-->
+            <include android:id="@+id/voucher_notice" layout="@layout/basic_group_purchase_needs" />
+            <!--附近商家-->
+            <include android:id="@+id/voucher_nerBy" layout="@layout/basic_nearby_merchants" />
+            <!--底部提示-->
+            <include layout="@layout/basic_end_pormpt" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <include android:id="@+id/voucher_buy_title" layout="@layout/title_bar"/>
+</RelativeLayout>

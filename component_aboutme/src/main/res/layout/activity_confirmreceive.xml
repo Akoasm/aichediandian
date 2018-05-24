@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/confirmReceive_title"
+        layout="@layout/home_title_layout"></include>
+
+    <include
+        android:id="@+id/confirmReceive_payStatus"
+        layout="@layout/basic_paystatus"></include>
+
+    <include
+        android:id="@+id/confirmReceive_receiverInfo"
+        layout="@layout/receiverinfo"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginTop="@dimen/dp_10"></include>
+
+    <include
+        android:id="@+id/confirmReceive_commodityInfo"
+        layout="@layout/commodityinfo"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="10dp"></include>
+</LinearLayout>

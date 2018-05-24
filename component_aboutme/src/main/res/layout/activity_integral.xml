@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <include layout="@layout/home_title_layout"
+        android:id="@+id/integral_title"></include>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前积分"
+        android:drawableLeft="@mipmap/icon_integral"
+        android:layout_marginLeft="15dp"
+        android:drawablePadding="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/colorGray"/>
+    <TextView
+        android:id="@+id/integral_integralNow_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:text="xxx"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="18sp"
+        android:textColor="@color/colorOrange"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#e6e6e6"
+        android:layout_below="@id/integral_integralNow_tv"
+        android:layout_marginLeft="15dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/integral_integralNow_tv"
+        android:textSize="@dimen/sp_12"
+        android:textColor="@color/text_hint"
+        android:text="积分使用说明：积分可以用于抵换代金券"
+        android:layout_marginLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"/>
+</RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/integral_srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/colorGray"
+                android:text="积分消费记录"
+                android:padding="15dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#e6e6e6" />
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/integral_list_lv"></ListView>
+        </LinearLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+</LinearLayout>

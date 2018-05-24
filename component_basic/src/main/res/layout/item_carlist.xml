@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/item_carlist_logo"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:background="@color/background"
+            android:layout_width="90dp"
+            android:layout_height="90dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/item_carlist_name"
+            android:text="车保姆汽车美容装饰"
+            android:textSize="18sp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textColor="@color/colorGray"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="现价："
+                android:textColor="@color/colorOrange"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/item_carlist_price"
+                android:text="25.00"
+                android:textColor="@color/colorOrange"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RatingBar
+                android:id="@+id/item_carlist_rating"
+                android:layout_gravity="center"
+                style="@style/myRatingBar"
+                android:numStars="5"
+                android:max="5"
+                android:progress="4"
+                android:stepSize="1"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"  />
+            <TextView
+                android:id="@+id/item_carlist_ratingtv"
+                android:text="（5分）"
+                android:textColor="@color/colorOrange"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/item_carlist_location"
+                android:layout_alignParentRight="true"
+                android:text="1.74km"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/item_carlist_address"
+                android:layout_alignParentLeft="true"
+                android:layout_alignBottom="@id/item_carlist_location"
+                android:textSize="13sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_toLeftOf="@id/item_carlist_location"
+                android:text="一环路东一段13号一栋附5号"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

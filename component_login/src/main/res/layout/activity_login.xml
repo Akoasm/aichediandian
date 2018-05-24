@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+    <LinearLayout
+        android:background="@mipmap/background_login_phone"
+        android:layout_width="match_parent"
+        android:layout_height="220dp">
+        <ImageView
+            android:id="@+id/phoneLogin_finish"
+            android:paddingTop="30dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:src="@mipmap/login_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/radius_eight"
+        android:layout_marginTop="178dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="+86"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:background="@color/colorGray2"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/phoneLogin_phone"
+                android:layout_marginRight="10dp"
+                android:hint="@string/input_phone"
+                android:lines="1"
+                android:maxLines="1"
+                android:inputType="phone"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/phoneLogin_clean"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/phone_clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/colorGray2"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/pwd_key"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="24dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:background="@color/colorGray2"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/phoneLogin_code"
+                android:hint="@string/input_code"
+                android:lines="1"
+                android:maxLines="1"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/phoneLogin_codedisplay"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:text="@string/get_code"
+                android:textSize="12sp"
+                android:textColor="@color/colorOrange"
+                android:padding="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@color/colorGray2"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp">
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/phoneLogin_to_acdd"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/background_gradient_vertical"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:text="进入爱车点点"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="进入爱车点点表示你已同意"
+                android:textSize="12sp"
+                android:textColor="@color/font_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/acdd_agreement"
+                android:text="《爱车点点用户协议》"
+                android:textSize="12sp"
+                android:textColor="@color/font_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_gravity="center"
+                android:background="@color/colorOrange"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp" />
+            <TextView
+                android:text="OR"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_gravity="center"
+                android:background="@color/colorOrange"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="1dp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/pwdLogin"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/font_color"
+            android:text="密码登录"
+            android:textSize="12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

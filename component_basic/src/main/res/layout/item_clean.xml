@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#EBEBEB"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/clean_item_ll"
+        android:gravity="center_vertical"
+        android:background="@color/colorWhite"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ToggleButton
+            android:id="@+id/clean_tog"
+            android:background="@drawable/clean_choose"
+            android:textOff=""
+            android:textOn=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:clickable="false"
+            android:layout_marginLeft="20dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+        <TextView
+            android:id="@+id/clean_goods_name"
+            android:text="123"
+            android:textSize="15dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/clean_market_price"
+            android:text="123"
+            android:textSize="12dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="￥"
+            android:textColor="#ff720a"
+            android:textSize="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/clean_price"
+            android:text="123"
+            android:textColor="#ff720a"
+            android:textSize="15dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/clean_description"
+        android:text="123"
+        android:textSize="15dp"
+        android:visibility="gone"
+        android:gravity="center_vertical"
+        android:background="#e0e0e0"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:id="@+id/clean_view1"
+        android:visibility="gone"
+        android:background="#e0e0e0"
+        android:layout_width="match_parent"
+        android:layout_height="1dp">
+
+    </View>
+    <View
+        android:id="@+id/clean_view2"
+        android:visibility="visible"
+        android:background="#e0e0e0"
+        android:layout_width="match_parent"
+        android:layout_height="10dp">
+
+    </View>
+</LinearLayout>

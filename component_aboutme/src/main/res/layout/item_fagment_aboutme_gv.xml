@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+        <RelativeLayout
+            android:id="@+id/item_function_rl"
+            android:layout_width="match_parent"
+            android:layout_height="74dp">
+                <ImageView
+                    android:id="@+id/item_function_iv"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/item_function_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_function_iv"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:text="待付款"
+                    android:textColor="#333333"
+                    android:textSize="13sp" />
+        </RelativeLayout>
+
+
+
+
+</LinearLayout>

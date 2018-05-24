@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <!--标题栏-->
+    <include android:id="@+id/payment_titleBar" layout="@layout/home_title_layout" />
+    <!--底部下单按钮-->
+    <LinearLayout
+        android:id="@+id/payment_bottom_ll"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/basic_bottom_order" />
+    </LinearLayout>
+    <com.sinata.rwxchina.basiclib.view.MyScrollView
+        android:layout_above="@id/payment_bottom_ll"
+        android:layout_below="@id/payment_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--美食商品信息-->
+            <include android:id="@+id/payment_goodsInformation" layout="@layout/basic_payment_merchant_information" />
+            <!--自助买单输入金额-->
+            <include android:id="@+id/payment_paySelf" layout="@layout/basic_payment_self" />
+            <!--购买数量和合计-->
+            <include android:id="@+id/payment_payNumber" layout="@layout/basic_payment_total_money"/>
+            <!--ktv&酒店、养生选择到店时间-->
+            <include android:id="@+id/payment_comeTime" layout="@layout/basic_payment_arrival_time"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <!--ktv&酒店、养生套餐-->
+            <include android:id="@+id/payment_group" layout="@layout/basic_package"/>
+            <!--折扣-->
+            <include android:id="@+id/payment_discount" layout="@layout/basic_payment_discount" />
+            <!--代金券-->
+            <include android:id="@+id/payment_voucher" layout="@layout/basic_payment_voucher"/>
+            <!--积分-->
+            <include android:id="@+id/payment_integral" layout="@layout/basic_payment_integral"/>
+            <!--余额-->
+            <include android:id="@+id/payment_balance" layout="@layout/basic_payment_balance"/>
+            <!--绑定手机号-->
+            <include android:id="@+id/payment_phoneNumber" layout="@layout/basic_payment_telephone"/>
+
+        </LinearLayout>
+    </com.sinata.rwxchina.basiclib.view.MyScrollView>
+
+</RelativeLayout>

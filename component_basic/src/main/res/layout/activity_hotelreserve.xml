@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--下单-->
+    <LinearLayout
+        android:id="@+id/hotelReserve_tobuy"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/basic_bottom_confirmorder"/>
+
+    </LinearLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/hotelReserve_scollview"
+        android:layout_above="@id/hotelReserve_tobuy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--广告栏-->
+            <include android:id="@+id/hotelReserve_banner" layout="@layout/basic_carousel_image"/>
+            <TextView
+                android:id="@+id/hotelReserve_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:text="-------"
+                android:textColor="@color/font_color"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="房间配备"
+                    android:textSize="16sp"
+                    android:textColor="#333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/hotelReserve_type"
+                    android:textSize="13sp"
+                    android:textColor="#999999"
+                    android:layout_marginTop="5dp"
+                    android:text="单人床1.2x2.0米1张"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="#999999"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <TextView
+                    android:id="@+id/hotelReserve_description"
+                    android:text="独立卫生间、热水洗浴、电吹风、洗漱用具、独立卫生间"
+                    android:textSize="14sp"
+                    android:textColor="#333333"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <!--购买须知-->
+            <include android:id="@+id/hotelReserve_notice" layout="@layout/basic_group_purchase_needs" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <View
+        android:id="@+id/hotelReserve_statue"
+        android:background="#00000000"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <!--标题-->
+    <LinearLayout
+        android:layout_below="@id/hotelReserve_statue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include android:id="@+id/hotelReserve_title"  layout="@layout/title_bar"/>
+    </LinearLayout>
+</RelativeLayout>

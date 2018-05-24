@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
+    package="com.sinata.rwxchina.component_basic_peccancy">
+
+    <application android:allowBackup="true" android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="com.sinata.rwxchina.basiclib.MyApplication">
+
+    </application>
+
+</manifest>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/title_bar_fakeview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <RelativeLayout
+        android:layout_below="@id/title_bar_fakeview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/title_bar_title_ll"
+
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#00000000"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/title_bar_relative"
+                android:layout_width="match_parent"
+                android:layout_height="44dp">
+
+                <ImageView
+                    android:id="@+id/title_bar_back"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/icon_back"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/title_bar_title_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:textColor="@color/font_color"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#666666" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/title_bar_linear"
+            android:layout_width="45dp"
+            android:layout_height="45dp">
+
+            <ImageView
+                android:id="@+id/title_bar_back_circle"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_margin="10dp"
+                android:src="@mipmap/icon_circle_back" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

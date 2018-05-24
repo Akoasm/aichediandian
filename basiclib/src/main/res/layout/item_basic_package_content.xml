@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#e6e6e6">
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="32dp">
+    <TextView
+        android:background="@drawable/package_background_stroke"
+        android:layout_weight="3"
+        android:text="精品肥牛"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical"
+        android:textSize="13dp"
+        android:textColor="@color/font_color"
+        android:id="@+id/item_package_name"
+        android:layout_width="0dp"
+        android:layout_height="32dp" />
+
+    <TextView
+        android:id="@+id/item_package_num"
+        android:background="@drawable/package_background_stroke"
+        android:layout_weight="1.5"
+        android:text="精品肥牛"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:textColor="@color/font_color"
+        android:layout_width="0dp"
+        android:layout_height="32dp" />
+
+    <TextView
+        android:id="@+id/item_package_money"
+        android:background="@drawable/package_background_stroke"
+        android:layout_weight="1"
+        android:text="精品肥牛"
+        android:gravity="center"
+        android:textSize="13dp"
+        android:textColor="@color/font_color"
+        android:layout_width="0dp"
+        android:layout_height="32dp" />
+    </LinearLayout>
+</RelativeLayout>

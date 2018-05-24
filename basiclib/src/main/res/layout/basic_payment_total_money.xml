@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:layout_marginTop="10dp"
+    >
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:padding="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="购买数量"
+            android:textColor="@color/font_color"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:paddingRight="15dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal">
+            <!--减号-->
+            <RelativeLayout
+                android:id="@+id/pop_brand_confim_order_amount_reduce"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/right_angle_border">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_amount_reduce" />
+            </RelativeLayout>
+            <!--数量-->
+            <EditText
+                android:id="@+id/activity_confim_order_sureorder_edit"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/right_angle_border"
+                android:digits="1234567890"
+                android:gravity="center"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:phoneNumber="true"
+                android:text="1"
+                android:textColor="@color/font_color"
+                android:textSize="15dp" />
+            <!--加号-->
+            <RelativeLayout
+                android:id="@+id/pop_brand_confim_order_amount_add"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/right_angle_border">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/icon_amount_plus" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/payment_discount_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="合计"
+            android:textColor="@color/font_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/payment_discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="176元"
+            android:textColor="@color/colorOrange"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+</LinearLayout>

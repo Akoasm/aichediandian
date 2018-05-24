@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@mipmap/entertainment_refund_two_normal"
+        android:maxLevel="1"
+        android:minLevel="0" />
+    <item
+        android:drawable="@mipmap/entertainment_refund_two_select"
+        android:maxLevel="3"
+        android:minLevel="2" />
+</level-list>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/health_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--广告栏-->
+            <include android:id="@+id/health_banner" layout="@layout/basic_carousel_image"/>
+            <!--名称-->
+           <include android:id="@+id/health_name" layout="@layout/basic_merchants_name"/>
+            <!--联系方式-->
+            <include android:id="@+id/health_information" layout="@layout/basic_contact_information" />
+            <!--买单-->
+            <include android:id="@+id/basc_health_discount" layout="@layout/basic_self_help_pay" />
+            <!--代金券-->
+            <include android:id="@+id/health_cashCoupon" layout="@layout/basic_cash_voucher" />
+            <!--预定-->
+            <include android:id="@+id/health_reserve" layout="@layout/health_reserve"/>
+            <!--团购-->
+            <include android:id="@+id/health_groups" layout="@layout/basic_group_purchase"/>
+            <!--技师-->
+            <include android:id="@+id/health_technician"  layout="@layout/health_technician"/>
+            <!--用户评价-->
+            <include android:id="@+id/health_comment" layout="@layout/basic_user_evaluation" />
+            <!--更多服务-->
+            <include android:id="@+id/health_service" layout="@layout/basic_more_services"/>
+            <!--附近商家-->
+            <include android:id="@+id/health_nearby" layout="@layout/basic_nearby_merchants"/>
+            <!--底部提示-->
+            <include layout="@layout/basic_end_pormpt"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <include android:id="@+id/health_title" layout="@layout/title_bar"/>
+</RelativeLayout>

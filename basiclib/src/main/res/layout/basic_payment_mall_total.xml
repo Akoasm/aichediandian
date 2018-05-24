@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="商品总额"
+            android:textColor="@color/font_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/payment_mall_total_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="0.00"
+            android:textColor="@color/colorOrange"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="运费"
+            android:textColor="@color/font_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/payment_discount_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="￥6"
+            android:textColor="@color/colorOrange"
+            android:textSize="15sp" />
+    </RelativeLayout>
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/mallPayment_discount_freight"
+        android:background="@color/colorWhite"
+        android:text="运费已抵扣6元"
+        android:textColor="@color/colorRed"
+        android:textSize="10sp"
+        android:paddingRight="10dp"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/mallpayment_needpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="需付款：265"
+            android:textColor="@color/colorOrange"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</LinearLayout>

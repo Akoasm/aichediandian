@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sinata.rwxchina.aichediandian.MainActivity">
+    <RadioGroup
+        android:id="@+id/activity_main_bottom"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/activity_main_home"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_main_btn_home"
+            android:textColor="@drawable/color_main_radiobutton"
+            android:text="首页"
+            android:gravity="center_horizontal"
+            android:button="@null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/activity_main_entertainment"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_main_btn_entertainment"
+            android:textColor="@drawable/color_main_radiobutton"
+            android:text="娱乐"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/activity_main_find"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_horizontal"
+            android:button="@null"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/selector_main_btn_find"
+            android:textColor="@drawable/color_main_radiobutton"
+            android:text="发现"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/activity_main_aboutme"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="center_horizontal"
+            android:button="@null"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/seltctor_main_btn_aboutme"
+            android:textColor="@drawable/color_main_radiobutton"
+            android:text="我的"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+    <LinearLayout
+        android:id="@+id/activity_main_content"
+        android:layout_above="@id/activity_main_bottom"
+        android:orientation="vertical"
+        android:layout_marginBottom="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
+
+
+</RelativeLayout>

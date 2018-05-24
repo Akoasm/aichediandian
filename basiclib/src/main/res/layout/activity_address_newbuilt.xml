@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/basic_normal_title" />
+
+    <com.sinata.rwxchina.basiclib.view.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!--收货人-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="收货人"
+                    android:textColor="@color/font_color"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/address_newbuilt_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@null"
+                    android:hint="请填写收货人姓名"
+                    android:textColorHint="@color/colorGray3"
+                    android:textColor="@color/text_hint"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <!--联系电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="联系电话"
+                    android:textColor="@color/font_color"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/address_newbuilt_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@null"
+                    android:hint="请输入电话号码"
+                    android:inputType="number"
+                    android:textColorHint="@color/colorGray3"
+                    android:textColor="@color/text_hint"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <!--所在地址-->
+            <LinearLayout
+                android:id="@+id/address_newbuilt_address_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="所在地址"
+                    android:textColor="@color/font_color"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/address_newbuilt_address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2.8"
+                    android:background="@null"
+                    android:hint="请选择地址"
+                    android:textColorHint="@color/colorGray3"
+                    android:textColor="@color/text_hint"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/address_newbuilt_address_next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@mipmap/icon_details_select" />
+            </LinearLayout>
+
+            <!--详细地址-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="详细地址"
+                    android:textColor="@color/font_color"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/address_newbuilt_details_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@null"
+                    android:hint="请输入详细地址"
+                    android:textColorHint="@color/colorGray3"
+                    android:textColor="@color/text_hint"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <!--设置为默认-->
+            <RelativeLayout
+                android:id="@+id/address_newbuilt_check_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="设为默认地址"
+                    android:textColor="@color/font_color"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/address_newbuilt_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:button="@drawable/shipping_address_checkbox"
+                    android:checked="false" />
+            </RelativeLayout>
+            <!--保存按钮-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="60dp"
+                android:layout_marginTop="80dp">
+
+                <Button
+                    android:id="@+id/address_newbuilt_conserve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@mipmap/home_address_newbuilt_conserve"
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.sinata.rwxchina.basiclib.view.MyScrollView>
+</LinearLayout>

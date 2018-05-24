@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/orderCancel_title"
+        layout="@layout/home_title_layout"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/orderCancel_payStatus_rl"
+                layout="@layout/basic_paystatus"></include>
+
+            <include
+                layout="@layout/receiverinfo"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:layout_marginTop="@dimen/dp_10">
+
+            </include>
+
+            <include
+                android:id="@+id/orderComplete_commodityInfo_rl"
+                layout="@layout/commodityinfo"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"></include>
+
+            <include layout="@layout/commoditypriceinfo"></include>
+
+            <include layout="@layout/basic_orderinfo_commdity"></include>
+
+            <Button
+                android:id="@+id/orderComplete_buyAgain_btn"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/dp_10"
+                android:background="@mipmap/buyagain_btn_bg"
+                android:text="再次购买"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

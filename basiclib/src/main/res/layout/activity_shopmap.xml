@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include android:id="@+id/shopMap_top" layout="@layout/basic_normal_title"/>
+    <RelativeLayout
+        android:id="@+id/shop_map_shop"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/background"
+            android:id="@+id/shopMap_logo"
+            android:scaleType="centerCrop"
+            android:layout_width="56dp"
+            android:layout_height="34dp" />
+        <LinearLayout
+            android:id="@+id/shopMap_go"
+            android:background="@drawable/linearlayout_background"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@mipmap/goshop"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerCrop"
+                android:layout_width="11dp"
+                android:layout_height="15dp" />
+            <TextView
+                android:text="到这里去"
+                android:layout_marginLeft="14dp"
+                android:textColor="@color/colorOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/shopMap_shopName_ll"
+            android:layout_toLeftOf="@id/shopMap_go"
+            android:layout_toRightOf="@id/shopMap_logo"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/shopMap_shopName"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:textSize="15sp"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/shopMap_shopAddress"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="14sp"
+                android:textColor="#333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <com.amap.api.maps.MapView
+        android:id="@+id/shop_map"
+        android:layout_above="@id/shop_map_shop"
+        android:layout_below="@id/shopMap_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.amap.api.maps.MapView>
+
+</RelativeLayout>

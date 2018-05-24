@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/home_title_layout"
+        android:id="@+id/apply_refund_title"/>
+
+    <com.sinata.rwxchina.basiclib.view.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--退款金额-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="退款金额"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/apply_refund_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:text="108元"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+            <!--退款方式-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/apply_refund_way"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="原路退还"
+                    android:textColor="@color/font_color"
+                    android:textSize="13sp" />
+            </LinearLayout>
+            <!--退款原因-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/apply_refund_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="15dp"
+                        android:text="退款原因"
+                        android:textColor="@color/font_color"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="（至少选一项）"
+                        android:textColor="@color/font_color"
+                        android:textSize="13sp" />
+                </LinearLayout>
+                <TextView
+                    android:background="@color/line_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/apply_refund_reason_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"></android.support.v7.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="更多理由，请输入"
+                        android:textColor="@color/font_color"
+                        android:textSize="14sp" />
+
+                    <EditText
+                        android:id="@+id/apply_refund_inputReason_et"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="35dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@null"
+                        android:hint="请输入退款理由，以便我们提供更方便的服务哦！"
+                        android:textColor="@color/colorGray3"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/apply_refund_submit_btn"
+                android:layout_width="300dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@mipmap/entertainment_apply_refund"
+                android:text="申请退款"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </com.sinata.rwxchina.basiclib.view.MyScrollView>
+</LinearLayout>

@@ -1,0 +1,86 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/orangeLight</item>
+        <item name="colorPrimaryDark">@color/orangebackground</item>
+        <item name="colorAccent">@color/orangebackground</item>
+        <item name="android:listDivider">@drawable/divider_bg</item>
+    </style>
+
+    //横向边距 20dp
+
+    <style name="back_gauge_20_horizontal">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    //四周边距 20dp
+
+    <style name="back_gauge_20_around">
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+    </style>
+    //闪屏页
+    <style name="Theme.AppLauncher" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@mipmap/start_startup</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="windowActionBar">false</item>
+        //一定要，否则有状态栏显示，不能全屏
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    //横向边距 10dp
+
+    <style name="back_gauge_10_horizontal">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    //四周边距 10dp
+
+    <style name="back_gauge_10_around">
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginBottom">15dp</item>
+    </style>
+
+    <!--星级-->
+    <style name="myRatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="android:progressDrawable">@drawable/customratingbar</item>
+        <item name="android:minHeight">10dp</item>
+        <item name="android:maxHeight">10dp</item>
+    </style>
+
+    <!--标题字体-->
+    <style name="TitleBar_Text">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:text">------</item>
+    </style>
+    <!--洗车-->
+    <style name="select_washcar_btn">
+        <item name="android:drawablePadding">5dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@drawable/color_main_radiobutton</item>
+    </style>
+
+    <style name="food_order_details">
+        <item name="android:textColor">@color/font_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+
+</resources>

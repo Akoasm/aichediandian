@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/RelativeLayout_ed"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <EditText
+            android:id="@+id/pop_lowPrice_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:singleLine="true"
+            android:background="@drawable/search_style"
+            android:hint="输入最低价"
+            android:lines="1"
+            android:textColor="@color/colorGray"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="45dp"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="75dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="28.5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/pop_lowPrice_edit"
+            />
+        <EditText
+            android:id="@+id/pop_highPrice_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:inputType="number"
+            android:singleLine="true"
+            android:background="@drawable/search_style"
+            android:hint="输入最高价"
+            android:lines="1"
+            android:textColor="@color/colorGray"
+            android:textSize="14sp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="45dp"
+            android:imeOptions="actionSearch" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_marginRight="5dp"
+    android:gravity="center_horizontal"
+    android:layout_width="82dp"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/yangsheng_recycle_item_img"
+        android:background="@mipmap/background"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/yangsheng_recycle_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#333333"
+        android:text="----"
+        android:textSize="13dp" />
+    <TextView
+        android:id="@+id/yangsheng_recycle_item_type"
+        android:background="@drawable/technician_text_shape"
+        android:gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="22dp"
+        android:text="4444"
+        android:maxLines="1"
+        android:textColor="#666666"
+        android:textSize="10dp" />
+
+</LinearLayout>

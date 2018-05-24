@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- start为其实颜色，end为结束颜色，angle为方向角度，0为从左到右，90为从上到下-->
+    <gradient
+        android:startColor="#ff9b01"
+        android:endColor="#ff6f01"
+        android:angle="0"
+        />
+</shape>

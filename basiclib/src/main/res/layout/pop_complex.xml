@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/item_pop_synthetical_rl"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/item_pop_synthetical_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="按推荐排列"
+            android:textColor="@color/text_hint"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/item_pop_synthetical_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/pop_item_choose"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/item_pop_score_rl"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="41dp"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/item_pop_score_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="按评分从高到低"-->
+            <!--android:textColor="@color/text_hint"-->
+            <!--android:textSize="14sp" />-->
+
+        <!--<ImageView-->
+            <!--android:id="@+id/item_pop_score_iv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:src="@mipmap/pop_item_choose"-->
+            <!--android:visibility="gone" />-->
+    <!--</RelativeLayout>-->
+
+    <RelativeLayout
+        android:id="@+id/item_pop_Sales_rl"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/item_pop_Sales_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="按销量从高到低"
+            android:textColor="@color/text_hint"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/item_pop_Sales_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/pop_item_choose"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_pop_priceHighToLow_rl"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/item_pop_priceHighToLow_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="按价格从高到低"
+            android:textColor="@color/text_hint"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/item_pop_priceHighToLow_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/pop_item_choose"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_pop_priceLowToHigh_rl"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TextView
+            android:id="@+id/item_pop_priceLowToHigh_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="按价格从低到高"
+            android:textColor="@color/text_hint"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/item_pop_priceLowToHigh_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/pop_item_choose"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

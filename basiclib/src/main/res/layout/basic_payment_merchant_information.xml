@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/group_item_relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp">
+
+        <!--图片-->
+        <ImageView
+            android:background="@mipmap/background"
+            android:id="@+id/food_order_details_goods_img"
+            android:layout_width="81dp"
+            android:layout_height="61dp"
+            android:scaleType="centerCrop" />
+        <!--名称-->
+        <LinearLayout
+            android:id="@+id/food_order_details_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/food_order_details_goods_img"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/payment_voucher_price"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/food_order_details_head_name"
+                    android:layout_toLeftOf="@id/payment_voucher_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:lineSpacingExtra="10dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/payment_goods_title"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:id="@+id/payment_goods_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/food_order_details_head_name"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/food_order_details_head_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/food_order_details_head_market_price"
+                    android:layout_alignBottom="@id/food_order_details_head_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/food_order_details_head_price"
+                    android:textSize="13dp" />
+
+            </RelativeLayout>
+            <!--随时退-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/goodsLabelsAttr_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

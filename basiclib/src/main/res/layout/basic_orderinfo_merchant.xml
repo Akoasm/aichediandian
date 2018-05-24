@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    >
+
+    <RelativeLayout
+        android:paddingBottom="10dp"
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/orderInfo_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="订单信息"
+        android:textColor="@color/colorGray"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/orderNumber_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderInfo_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="订单号："
+        android:textColor="@color/text_hint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/orderInfo_orderNumber_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/orderNumber_tv"
+        android:layout_toRightOf="@id/orderNumber_tv"
+        android:textColor="@color/text_hint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/userPhoneNumber_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/orderNumber_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="购买手机号："
+        android:textColor="@color/text_hint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/orderInfo_userPhoneNumber_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/userPhoneNumber_tv"
+        android:layout_toRightOf="@id/userPhoneNumber_tv"
+        android:textColor="@color/text_hint"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/payTime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userPhoneNumber_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="付款时间："
+        android:textColor="@color/text_hint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/orderInfo_payTime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/payTime_tv"
+        android:layout_toRightOf="@id/payTime_tv"
+        android:textColor="@color/text_hint"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payTime_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="数量："
+        android:textColor="@color/text_hint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/orderInfo_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/count_tv"
+        android:layout_toRightOf="@id/count_tv"
+        android:textColor="@color/text_hint"
+        android:textSize="14sp"/>
+    <TextView
+        android:id="@+id/realPay_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/count_tv"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:text="实付："
+        android:textColor="@color/text_hint"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/orderInfo_realPay_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/realPay_tv"
+        android:layout_toRightOf="@id/realPay_tv"
+        android:textColor="@color/text_hint"
+        android:textSize="14sp"/>
+    </RelativeLayout>
+</RelativeLayout>

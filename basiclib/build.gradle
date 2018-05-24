@@ -1,0 +1,134 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+apply plugin: 'com.mob.sdk'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            //设置支持的SO库架构
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "x86","arm64-v8a","x86_64"
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions{
+        exclude 'META-INF/services/javax.annotation.processing.Processor' // will not include NOTICE file
+    }
+}
+MobSDK {
+    appKey "149bc7e3db4e6"
+    appSecret "095b08e18c775909fad0987ddc5e4498"
+
+    ShareSDK {
+        //平台配置信息
+        devInfo {
+            Wechat {
+                appId "wx62b43c4dd762da48"
+                appSecret "2b05c50aad0bd5a2265cd2a3db262f14"
+            }
+            WechatMoments {
+                appId "wx62b43c4dd762da48"
+                appSecret "2b05c50aad0bd5a2265cd2a3db262f14"
+            }
+            QQ {
+                appId "1105516290"
+                appKey "FIe6t0YgXgNdbre6"
+                shareByAppClient true
+            }
+            QZone {
+                appId "1105516290"
+                appKey "FIe6t0YgXgNdbre6"
+            }
+        }
+    }
+
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:27.+'
+    compile 'com.android.support:design:27.+'
+    compile 'com.android.support:cardview-v7:27.+'
+    testCompile 'junit:junit:4.12'
+    compile project(':retrofitutils')
+    compile project(':basicres')
+    //AgentWeb，webview控件
+    compile 'com.just.agentweb:agentweb:3.1.0'
+    //log打印
+    compile 'com.orhanobut:logger:1.15'
+    //图片加载Glide
+    compile 'com.github.bumptech.glide:glide:4.1.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    //glide使用okhttp加载
+    compile 'com.github.bumptech.glide:okhttp3-integration:4.1.1'
+    //eventbus
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //下拉刷新，上拉加载
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4'
+    //数据解析GSON
+    compile 'com.google.code.gson:gson:2.8.2'
+    //权限申请permissions4m
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    //3D地图so及jar
+    compile 'com.amap.api:3dmap:5.4.0'
+    //定位功能
+    compile 'com.amap.api:location:3.6.1'
+    //搜索功能
+    compile 'com.amap.api:search:5.3.1'
+    //九宫格图片
+    compile 'com.lzy.widget:ninegridview:0.2.0'
+    //recyclerView的adapter
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
+    //银行卡堆叠效果
+    compile 'com.loopeer.library:cardstack:1.0.2'
+    //日期、城市选择
+    compile 'com.contrarywind:Android-PickerView:3.2.7'
+    //知乎开源图片选择框架
+    compile 'com.zhihu.android:matisse:0.5.0-beta2'
+    //ImageViewZoom，matisse需要依赖，具有图片缩放和平移功能
+    compile 'it.sephiroth.android.library.imagezoom:library:1.0.4'
+    //沉浸式效果框架
+    compile 'com.jaeger.statusbarutil:library:1.4.0'
+    compile 'com.android.support:multidex:1.0.0'
+    //BGAQRCode(Zxing封装框架)
+    compile 'com.google.zxing:core:3.3.0'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.9@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.9@aar'
+    //支付宝支付
+    compile files('libs/alipaySdk-20170922.jar')
+    //微信分享、登录、收藏、支付等
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    //城市选择
+    compile 'liji.library.dev:citypickerview:3.0.1'
+    //消息提示控件
+    compile 'q.rorbin:badgeview:1.1.3'
+    //流式布局
+    compile 'com.nex3z:flow-layout:0.1.2'
+    //BigImageViewer
+    compile 'com.github.piasy:BigImageViewer:1.4.6'
+    compile 'com.github.piasy:GlideImageLoader:1.4.6'
+    //Progress PieView
+    compile 'com.github.filippudak.progresspieview:library:1.0.4'
+    //photoview
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+}

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:id="@+id/item_commodity_ll">
+
+    <!--图片-->
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/item_brand_area_list_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="1dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/right_angle_border" />
+
+    <LinearLayout
+        android:id="@+id/item_brand_area_ll"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/item_brand_area_list_image">
+        <!--名字-->
+        <TextView
+            android:id="@+id/item_brand_area_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="美孚速霸"
+            android:textColor="@color/font_color"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <!--描述-->
+        <TextView
+            android:id="@+id/item_brand_area_list_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="合成机油"
+            android:textColor="@color/text_hint"
+            android:textSize="13sp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <!--备注-->
+        <TextView
+            android:id="@+id/item_brand_area_list_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="官方正品"
+            android:textColor="@color/colorRed"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+        <!--价格-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:id="@+id/item_brand_area_list_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="586.00"
+                android:textColor="@color/colorOrange"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/item_brand_area_list_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥"
+                android:textColor="@color/colorOrange"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:text="0人预定"
+                android:id="@+id/item_brand_area_list_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorGray3"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+        <!--标签-->
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/item_brand_area_list_label"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>-->
+    </LinearLayout>
+    <TextView
+        android:background="@color/line_background"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/item_brand_area_ll"
+        android:layout_alignLeft="@id/item_brand_area_ll"
+        android:layout_marginTop="20dp"/>
+</RelativeLayout>

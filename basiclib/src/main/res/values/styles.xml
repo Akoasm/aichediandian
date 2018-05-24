@@ -1,0 +1,112 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/orangeLight</item>
+        <item name="colorPrimaryDark">@color/orangebackground</item>
+        <item name="colorAccent">@color/orangebackground</item>
+        <item name="android:listDivider">@drawable/divider_bg</item>
+    </style>
+    <style name="popcenter_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_centershow</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pop_centerhidden</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+    <style name="popbottom_anim_style">
+        <item name="android:windowEnterAnimation">@anim/pop_bottomshow</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pop_bottomhidden</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+    <style name="tablayoutText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#333333</item>
+    </style>
+    <declare-styleable name="SwitchView">
+        <attr name="textTrue" format="string" />
+        <attr name="textFalse" format="string" />
+        <attr name="container_Hight" format="dimension" />
+        <attr name="container_Width" format="dimension" />
+        <attr name="cursor_Hight" format="dimension" />
+        <attr name="cursor_Width" format="dimension" />
+        <attr name="cursor_Background" format="reference|color" />
+        <attr name="container_Background" format="reference|color" />
+    </declare-styleable>
+
+    <!-- 自定义仿IOS的ActionSheet底部Dialog的样式 ，有模糊效果 -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
+    <!-- 日历 -->
+    <declare-styleable name="DayPickerView">
+        <attr name="colorCurrentDay" format="color"/>               <!-- 今天字体颜色 -->
+        <attr name="colorSelectedDayBackground" format="color"/>    <!-- 被选中的日期背景颜色 -->
+        <attr name="colorSelectedDayText" format="color"/>          <!-- 被选中的日期字体颜色 -->
+        <attr name="colorPreviousDayText" format="color"/>          <!-- 已过去的日期字体颜色 -->
+        <attr name="colorNormalDayText" format="color" />           <!-- 正常日期颜色 -->
+        <attr name="colorYearMonthText" format="color" />           <!-- 头部年份月份字体颜色 -->
+        <attr name="colorWeekText" format="color" />                <!-- 头部星期几字体颜色 -->
+        <attr name="colorBusyDaysBg" format="color" />              <!-- 被占用的日期背景颜色 -->
+        <attr name="colorInValidDaysBg" format="color" />           <!-- 禁用的日期背景颜色 -->
+        <attr name="colorBusyDaysText" format="color" />            <!-- 被占用的日期字体颜色 -->
+        <attr name="colorInValidDaysText" format="color" />         <!-- 禁用的日期字体颜色 -->
+        <attr name="textSizeDay" format="dimension"/>               <!-- 正常日期字体大小 -->
+        <attr name="textSizeTag" format="dimension"/>               <!-- 标签字体大小 -->
+        <attr name="textSizeYearMonth" format="dimension" />        <!-- 头部年份月份字体大小 -->
+        <attr name="textSizeWeek" format="dimension" />             <!-- 头部星期几字体大小 -->
+        <attr name="headerMonthHeight" format="dimension" />        <!-- 头部高度 -->
+        <attr name="selectedDayRadius" format="dimension" />        <!-- 日期半径 -->
+        <attr name="calendarHeight" format="dimension" />           <!-- 行高 -->
+        <attr name="enablePreviousDay" format="boolean" />          <!-- 已过去的日期是否能被操作 -->
+    </declare-styleable>
+
+    <!-- 弹出框 -->
+    <style name="PopupAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/colorWhite</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+</resources>

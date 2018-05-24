@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/buySuccess_title"
+        layout="@layout/home_title_layout"></include>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/buySuccess_title">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include
+                layout="@layout/basic_paystatus"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"></include>
+
+            <include
+                layout="@layout/commodityinfo"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="10dp"></include>
+
+            <include
+                layout="@layout/commoditypriceinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </include>
+
+            <include
+                android:id="@+id/orderInfo_rl"
+                layout="@layout/basic_orderinfo_commdity"
+                android:layout_width="match_parent"
+                android:layout_height="129dp"
+                android:layout_marginTop="10dp"></include>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

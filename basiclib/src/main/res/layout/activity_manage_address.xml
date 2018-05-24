@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/manage_address_title"
+        layout="@layout/basic_normal_title" />
+
+
+    <!--新建地址-->
+    <LinearLayout
+        android:id="@+id/manage_address_newbuilt"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/home_newbuilt_address"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/add_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="新建地址"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/manage_address_newbuilt"
+        android:layout_below="@id/manage_address_title">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/manage_address_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"></android.support.v7.widget.RecyclerView>
+        <!--无收货地址-->
+        <LinearLayout
+            android:id="@+id/manage_address_noaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/home_shipping_address_background" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="还没有填写收货地址哦~"
+                android:textColor="@color/colorGray3"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

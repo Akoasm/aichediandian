@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/background">
+        <EditText
+            android:id="@+id/refund_search_et"
+            android:layout_width="345dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/search_et_bg"
+            android:hint="商品名称，订单编号"
+            android:drawableLeft="@mipmap/icon_search"
+            android:drawablePadding="@dimen/dp_10"
+            android:paddingLeft="15dp"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"/>
+    </RelativeLayout>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refund_srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/refund_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            ></ListView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

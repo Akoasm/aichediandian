@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<include layout="@layout/home_title_layout"
+    android:id="@+id/balanceDetail_title"></include>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/balanceDetail_srl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/balanceDetail_title">
+        <ListView
+            android:id="@+id/balanceDetail_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/balanceDetail_title"></ListView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</RelativeLayout>

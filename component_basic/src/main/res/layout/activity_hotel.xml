@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/hotel_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--广告栏-->
+            <include android:id="@+id/hotel_banner" layout="@layout/basic_carousel_image"/>
+            <!--名称-->
+            <include android:id="@+id/hotel_name" layout="@layout/basic_merchants_name"/>
+            <!--地址信息-->
+            <include android:id="@+id/hotel_information" layout="@layout/basic_contact_information"/>
+            <!--自助买单-->
+            <include android:id="@+id/hotel_checkSelf" layout="@layout/basic_self_help_pay"/>
+            <!--代金券-->
+            <include android:id="@+id/hotel_cashcoupon" layout="@layout/basic_cash_voucher"/>
+            <!--选择日期-->
+            <include android:id="@+id/hotel_reserve" layout="@layout/hotel_reserve"/>
+            <!--用户评价-->
+            <include android:id="@+id/hotel_comment" layout="@layout/basic_user_evaluation"/>
+            <!--更多服务-->
+            <include android:id="@+id/hotel_service" layout="@layout/basic_more_services"/>
+            <!--附近商家-->
+            <include android:id="@+id/hotel_nearby" layout="@layout/basic_nearby_merchants"/>
+            <!--底部提示-->
+            <include layout="@layout/basic_end_pormpt"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <include android:id="@+id/hotel_title" layout="@layout/title_bar"/>
+</RelativeLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sinata.rwxchina.component_aboutme">
+
+    <application
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:name="com.sinata.rwxchina.basiclib.MyApplication">
+        <activity android:name=".activity.BalanceActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.BalanceDetailActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.WithDrawActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.AddBankCardActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.BankCardActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.WithDrawDetailActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.WithdrawStatusActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.MyOrderActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.RefundActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.EntertainmentOrderDetailActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name="com.sinata.rwxchina.basiclib.commonclass.activity.EntertainmentOrderBuySuccessActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.ApplyRefundActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.ApplyRefund_MerhcantActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.RefundDetailActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.IntegralActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.RefundFailedActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.RefundingActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.RefundSuccessActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.SettingActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.UpdatePersonalInfoActivity" android:screenOrientation="portrait" android:launchMode="singleTask"/>
+        <activity android:name=".activity.AboutUsActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+        <activity android:name=".activity.ConfirmReceiveActivity" android:screenOrientation="portrait" android:launchMode="singleTask"></activity>
+    </application>
+
+
+</manifest>

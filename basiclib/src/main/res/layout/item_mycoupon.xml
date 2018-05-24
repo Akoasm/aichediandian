@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="133dp"
+    android:orientation="vertical">
+<RelativeLayout
+    android:id="@+id/item_coupon_rl"
+    android:layout_width="match_parent"
+    android:layout_height="123dp"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:background="@mipmap/normal_coupon_bg">
+    <ImageView
+        android:id="@+id/item_couponStatus_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_used"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/immediatelyUse_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="32dp"
+        android:text="立\n即\n使\n用"
+        android:textSize="15sp"
+        android:textColor="@color/colorOrange"
+        android:visibility="visible"/>
+    <ImageView
+        android:id="@+id/icon_rmb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_rmb_orange"
+
+        android:layout_marginLeft="85dp"
+        android:layout_marginTop="42dp"/>
+    <TextView
+        android:id="@+id/item_couponMoney_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon_rmb"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:textStyle="bold"
+        android:textSize="48sp"
+        android:text="15"
+        android:layout_marginTop="13dp"
+        android:textColor="@color/colorOrange"/>
+    <TextView
+        android:id="@+id/item_couponName_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/item_couponMoney_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_alignBottom="@id/item_couponMoney_tv"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:textSize="18sp"
+        android:textColor="@color/colorOrange"
+        android:text="洗车"/>
+    <TextView
+        android:id="@+id/Validity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/icon_rmb"
+        android:layout_below="@id/icon_rmb"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_hint"
+        android:text="有效期至  "/>
+    <TextView
+        android:id="@+id/item_validity_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon_rmb"
+        android:layout_marginTop="12dp"
+        android:textSize="12sp"
+        android:textColor="@color/text_hint"
+        android:layout_toRightOf="@id/Validity_tv"
+        android:text="有效期至  "/>
+    <TextView
+        android:id="@+id/item_couponRule_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/Validity_tv"
+        android:layout_below="@id/Validity_tv"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/sp_12"
+        android:text="可用于"/>
+
+
+</RelativeLayout>
+
+</LinearLayout>

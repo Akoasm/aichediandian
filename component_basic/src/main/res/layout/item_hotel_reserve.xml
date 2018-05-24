@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/item_hotel_reserve_btn"
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_gradient_horizontal_right"
+            android:text="预定"
+            android:textColor="@color/white" />
+        <LinearLayout
+            android:layout_toLeftOf="@id/item_hotel_reserve_btn"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_hotel_reserve_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="特惠豪华单间"
+                android:textColor="@color/font_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/item_hotel_reserve_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大床 单间"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/text_hint"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/item_hotel_reserve_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6小时+酒水套餐"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/colorOrange"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/item_hotel_reserve_btn"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_hotel_reserve_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥188.00"
+                android:textColor="@color/colorOrange"
+                android:textSize="15sp" />
+            <TextView
+                android:layout_marginLeft="3dp"
+                android:id="@+id/item_hotel_reserve_origin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥188.00"
+                android:textColor="@color/colorGray3"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

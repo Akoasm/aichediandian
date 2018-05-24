@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="refundTextView_selected">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@mipmap/button_selected_bg</item>
+    </style>
+    <style name="refundTextView_unselected">
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">#ffffff</item>
+    </style>
+</resources>

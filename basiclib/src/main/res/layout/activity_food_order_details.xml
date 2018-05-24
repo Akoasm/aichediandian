@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <!--标题栏-->
+    <include layout="@layout/home_title_layout"
+        android:id="@+id/orderDetail_title"/>
+
+    <com.sinata.rwxchina.basiclib.view.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--头部信息-->
+            <include
+                layout="@layout/basic_payment_merchant_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!--退款-->
+            <RelativeLayout
+                android:id="@+id/food_order_details_refund_relative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/food_order_details_refund_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="双人餐"
+                        android:textColor="@color/font_color"
+                        android:textSize="15sp" />
+
+                    <!--<TextView-->
+                    <!--android:id="@+id/food_order_details_refund_term"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:text="有效期"-->
+                    <!--android:textColor="@color/colorGray3" />-->
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/food_order_details_refund"
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@mipmap/order_details_apply_refund"
+                    android:text="申请退款"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+                <!--退款完成-->
+                <TextView
+                    android:id="@+id/order_details_refund_complete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:text="退款已完成"
+                    android:textColor="@color/colorOrange"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+            <!--商家信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="15dp"
+                    android:text="商家信息"
+                    android:textColor="@color/colorGray3"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/shopScore_ll"
+                layout="@layout/basic_merchants_name" />
+
+            <include
+                android:id="@+id/shopInfo_ll"
+                layout="@layout/basic_contact_information" />
+            <!--套餐-->
+            <include
+                android:id="@+id/group_ll"
+                layout="@layout/basic_package"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!--订单信息-->
+            <include
+                android:id="@+id/orderInfo_rl"
+                layout="@layout/basic_orderinfo_merchant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/entertainment_order_details_remind" />
+
+                <TextView
+                    android:id="@+id/food_order_details_remind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="今天可退，预期不可退"
+                    android:textColor="@color/text_hint"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.sinata.rwxchina.basiclib.view.MyScrollView>
+</LinearLayout>

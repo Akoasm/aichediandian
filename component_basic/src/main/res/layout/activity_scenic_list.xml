@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/scenic_fakeview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/scenic_list_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/icon_back" />
+
+        <TextView
+            android:id="@+id/food_order_details_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="景区"
+            android:textColor="@color/font_color"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/scenic_list_location"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/icon_list_location" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#666666" />
+
+    <RelativeLayout
+        android:id="@+id/scenic_search_relative"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="298dp"
+        android:layout_height="30dp"
+        android:layout_centerVertical="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/background_gray_radius">
+
+        <ImageView
+            android:id="@+id/scenic_search_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/pop_search" />
+
+        <EditText
+            android:id="@+id/scenic_search_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/scenic_search_image"
+            android:background="@null"
+            android:hint="请输入搜索景点"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColorHint="@color/colorGray3"
+            android:textColor="@color/font_color"
+            android:textSize="14sp" />
+
+
+
+    </RelativeLayout>
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/scenic_smartRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/scenic_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>
